@@ -9,6 +9,7 @@ module.exports = function (devMode, options) {
       new webpack.HotModuleReplacementPlugin()
     ],
     devServer: {
+      historyApiFallback: true,
       contentBase: options.outputPath,
       compress: false,
       hot:true,
