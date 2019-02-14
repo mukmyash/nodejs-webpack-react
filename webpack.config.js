@@ -15,7 +15,7 @@ module.exports = function (env, argv) {
   console.log('--------------------------------------' + (devMode ? 'DEVELOPMENT' : 'PRODUCTION') + '--------------------------------------');
   console.log('--------------------------------------------------------------------------------------');
   return merge([{
-    devtool: devMode ? 'eval' : 'source-maps',
+    devtool: devMode ? 'inline-source-map' : 'source-maps',
     mode: devMode ? 'development' : 'production',
     entry: {
       main: './src/index.tsx'
