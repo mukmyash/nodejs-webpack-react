@@ -6,8 +6,10 @@ const all_config = require('./webpack.config/webpack.config.all');
 
 module.exports = function (env, argv) {
   const options = {
-    outputPath: path.resolve(__dirname, 'dist'),
+    srcPath: 'src',
+    outputPath: path.resolve(__dirname, 'wwwroot', 'dist'),
     appName: 'AV',
+    htmlOutputName: 'index.html'
   }
 
   const devMode = env ? !env.prod : true;
@@ -18,9 +20,10 @@ module.exports = function (env, argv) {
     devtool: devMode ? 'inline-source-map' : 'source-maps',
     mode: devMode ? 'development' : 'production',
     entry: {
-      main: './src/index.tsx'
+      main: path.resolve(__dirname, options.srcPath, 'index.tsx'),
     },
     output: {
+      publicPath: '/',
       path: options.outputPath,
       filename: devMode ? '[name].js' : '[name].[hash].js'
     },

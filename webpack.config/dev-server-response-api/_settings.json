@@ -1,0 +1,24 @@
+{
+    "Responses": [
+       /* {
+            "urlPath": "/url-path/1",
+            "Data": "file1.json",
+            "MethodeType": "GET"
+        },
+        {
+            "urlPath": "/url-path/2",
+            "Data": "file1.json",
+            "MethodeType": "POST"
+        },
+        {
+            "urlPath": "/url-path/3",
+            "Data": "file1.json",
+            "MethodeType": "PUT"
+        },
+        {
+            "urlPath": "/url-path/4",
+            "Data": "file1.json",
+            "MethodeType": "DELETE"
+        },*/
+    ]
+}

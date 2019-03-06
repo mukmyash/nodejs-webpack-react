@@ -1,4 +1,5 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 
 module.exports = function (devMode, options) {
@@ -6,7 +7,8 @@ module.exports = function (devMode, options) {
     plugins: [
       new HtmlWebpackPlugin({
         title: options.appName,
-        template: 'src/index.template.html'
+        template: path.resolve(options.srcPath, 'index.template.html'),
+        filename: options.htmlOutputName
       })
     ]
   };

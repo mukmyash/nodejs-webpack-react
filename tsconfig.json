@@ -1,11 +1,43 @@
 {
-    "include": ["./src/**/*"],
     "compilerOptions": {
-        "outDir": "./dist/",
-        "sourceMap": true,
-        "noImplicitAny": true,
-        "module": "commonjs",
-        "target": "es5",
-        "jsx": "react"
+        "baseUrl": ".",
+        "allowSyntheticDefaultImports": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "forceConsistentCasingInFileNames": true,
+        "importHelpers": true,
+        "noEmitHelpers": true,
+        "jsx": "react",
+        "lib": [
+            "dom",
+            "es2017"
+        ],
+        "target": "esnext",
+        "module": "es2015",
+        "moduleResolution": "node",
+        "paths": {
+          "*": [
+            "*",
+            "src/*"
+          ]
+        },
+        "pretty": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": false,
+        "noImplicitReturns": true,
+        "strictNullChecks": true,
+        "removeComments": true,
+        "sourceMap": true
+    },
+    "exclude": [
+        "node_modules",
+        "wwwroot"
+    ],
+    "include": [
+        "./src/**/*"
+    ],
+    "awesomeTypescriptLoaderOptions": {
+        "useCache": true,
+        "useBabel": false
     }
 }
